@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="navbar-container">
+    <header>
+      <nav id="navbar">
+        <form class="formulario" role="search">
+          <input type="search" name="buscador" id="buscador" placeholder="Buscar...">
+          <input id="submit" type="submit" value="Buscar"></input>
+        </form>
+        <div class="logo">
+          <a href="https://www.nike.com/us/es/" target="_blank"><img src="./assets/nike-logo.png" alt="Nike Logo"></a>
+        </div>
+        <ul>
+          <li class="list-item"><a href="https://www.instagram.com/nike/" target="_blank"
+              class="link-item">INSTAGRAM</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle link-item" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              SUCURSALES
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Nike Nuevocentro</a></li>
+              <li><a class="dropdown-item" href="#">Nike Montevideo</a></li>
+            </ul>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <div class="espacio"></div>
+  <section id="carrusel">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./assets/banner1.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/banner2.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/banner8.png" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+  <div class="espacio"></div>
+  <main id="main">
+    <div class="titulo">
+      <h1>LOS MAS POPULARES DEL MOMENTO</h1>
+    </div>
+    <div id="productos"></div>
+    <div id="btns">
+      <button type="button" id="catalogoOff" class="btn btn-outline-dark btn-sm">Ocultar Catalogo</button>
+      <button type="button" id="catalogoOn" class="btn btn-outline-dark btn-sm">Ver Catalogo</button>
+    </div>
+    <section id="section-nas">
+      <div class="section-container">
+        <div class="img-lilnas">
+          <img src="./assets/nike-lilnas.jpg" alt="">
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="footer">
+
+  </footer>
+
+
+
+
+  <script src="./codigo.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

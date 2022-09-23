@@ -1,0 +1,136 @@
+*{
+    list-style: none;
+    font-family: 'Questrial', sans-serif;
+
+}
+#productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: space-evenly;
+    
+}
+.card{
+    margin: 20px;
+}
+.card:hover{
+    border: 1px solid #141414;
+    cursor: pointer;
+}
+.card-title{
+    font-weight:lighter;
+    font-family: 'Fjalla One', sans-serif;
+}
+.card img {
+    transition:all 0.5s;
+}
+.card-body{
+    text-align: center;
+}
+#btns{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 70px;
+}
+
+#navbar-container{
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+#navbar, ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding-right: 30px;
+    color: #141414;
+}
+#buscador{
+    
+    border: 1px solid #141414;
+}
+.link-item{
+    margin-right: 10px;
+    text-decoration: none;
+    color: #141414;
+    transition: all 1.5s;
+}
+.link-item:hover{
+    color: #141414;
+    border-bottom: 1px solid#141414;
+}
+.logo img{
+    width: 55px;
+}
+.formulario{
+    padding-left: 20px;
+}
+.espacio{
+    background-color: #141414;
+    height: 20px;
+}
+
+#submit{
+    background-color: white;
+    color: #141414;
+    border: 1px solid #141414;
+    border-radius: 4px;
+    transition: all 0.5s;
+}
+#submit:hover{
+    background-color: #141414;
+    color: white;
+    border: 1px solid #434343
+}
+.titulo h1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 45px;
+    font-style: italic;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.grid-container{
+    margin-top: 40px;
+}
+
+#footer{
+    background-color:#141414;
+    height: 400px;
+}
+#section-nas{
+    background: linear-gradient(rgba(5,7,12,0.75), rgba(5,7,12,0.75)),  
+    url(./assets/bold.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+    background-attachment:fixed ;
+    
+}
+
+.titulo-2 h1 {
+    font-family: 'Fjalla One', sans-serif;
+    color: white;
+    text-shadow: 6px 0px 5px #141414 ;
+    font-size: 45px;
+    font-style: italic;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.img-lilnas img{
+    width: 590px;
+    position: relative;
+    margin-top: 120px;
+    margin-left: 20px;
+    box-shadow: 25px 15px 15px black;
+    transition: all 0.5s;
+}
+.img-lilnas img:hover{
+    width: 600px;
+    cursor: pointer;
+}
+
