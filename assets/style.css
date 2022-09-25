@@ -92,34 +92,48 @@
     padding-top: 50px;
     padding-bottom: 20px;
 }
-.grid-container{
-    margin-top: 40px;
-}
 
-#footer{
-    background-color:#141414;
-    height: 400px;
-}
 #section-nas{
     background: linear-gradient(rgba(5,7,12,0.75), rgba(5,7,12,0.75)),  
-    url(./assets/bold.jpg);
+    url(./bold.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 700px;
     background-attachment:fixed ;
     
 }
-
-.titulo-2 h1 {
-    font-family: 'Fjalla One', sans-serif;
-    color: white;
-    text-shadow: 6px 0px 5px #141414 ;
-    font-size: 45px;
-    font-style: italic;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 20px;
+.section-container{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-right: 20px;
+    
 }
+.bodynas{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    justify-content: center;
+}
+.bodynas h1,p{
+    text-align: center;
+}
+.bodynas h1{
+    font-family: 'Fjalla One', sans-serif;
+    position: relative;
+    font-size: 55px;
+    top: 90px;
+    color: #e73131; 
+    text-shadow: 10px 5px 7px black;
+    font-style: italic;
+    font-weight: bolder;
+}
+.bodynas p{
+    font-size: 20px;
+    color: white;
+    text-align: left;
+}
+
 
 .img-lilnas img{
     width: 590px;
@@ -130,7 +144,9 @@
     transition: all 0.5s;
 }
 .img-lilnas img:hover{
-    width: 600px;
+    width: 595px;
     cursor: pointer;
 }
-
+.modal-content{
+    width: 500px;
+}
