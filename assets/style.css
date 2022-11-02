@@ -1,4 +1,8 @@
+
 *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
     list-style: none;
     font-family: 'Questrial', sans-serif;
 
@@ -51,6 +55,10 @@
     
     border: 1px solid #141414;
 }
+#submit{
+    padding-left: 2px;
+    padding-right: 2px;
+}
 .link-item{
     margin-right: 10px;
     text-decoration: none;
@@ -63,6 +71,8 @@
 }
 .logo img{
     width: 55px;
+    position: relative;
+    left: -80px;
 }
 .formulario{
     padding-left: 20px;
@@ -100,7 +110,7 @@
     background-repeat: no-repeat;
     height: 700px;
     background-attachment:fixed ;
-    
+    margin-bottom: 30px;
 }
 .section-container{
     display: flex;
@@ -149,4 +159,184 @@
 }
 .modal-content{
     width: 500px;
+}
+.clothes{
+    height: 2000px;
+    background-color: white;
+}
+.background {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.background img {
+    width: 95%;
+}
+.exitostxt {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 80px;
+    text-align: center;
+    position: relative;
+    line-height: 75px;
+    font-weight: bold;
+    top: -320px;
+    left: -470px;
+    color: white;
+}
+.exitosp{
+    text-align: left;
+    position: relative;
+    top: -300px;
+    left:100px;
+    color: white;
+    line-height:7px ;
+    
+}
+.btn-background{
+    display:inline;
+    position: relative;
+    top: -290px;
+    left:-550px;
+    background-color: white;
+    padding: 10px 15px 10px 15px;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+.btn-background a {
+    text-decoration: none;
+    color: black;
+}
+.btn-background:hover{
+    cursor: pointer;
+    background-color: #b2b2b2;
+}
+.btn-background a:hover{
+    cursor: pointer;
+    color: black;
+}
+.titulo2{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 35px;
+    margin-left: 45px;
+    padding-bottom: 20px;
+}
+.background2{
+    text-align: center;
+    width: auto;
+}
+.exitostxt {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 80px;
+    text-align: center;
+    position: relative;
+    line-height: 75px;
+    font-weight: bold;
+    top: -320px;
+    left: -470px;
+    color: white;
+}
+
+.exitosp2{
+  margin-top: 25px;
+  line-height: 1px;
+
+}
+.btn-background2{
+    display: inline;
+    position: relative;
+    left: 46%;
+    top: 18px;
+    background-color: white;
+    border: 1px solid #b2b2b2;
+    padding: 10px 15px 10px 15px;
+    border-radius: 10px;
+    transition: all 0.3s;
+
+}
+.btn-background2 a {
+    text-decoration: none;
+    color: black;
+}
+.btn-background2:hover{
+    cursor: pointer;
+    background-color: #b2b2b2;
+}
+.btn-background2 a:hover{
+    cursor: pointer;
+    color: black;
+}
+#footer{
+    margin-top: 50px;
+    height: 400px;
+    background-color: #111111;
+}
+.main-footer{
+    display: flex;
+    gap: 40px;
+}
+
+.footer-col{
+    display: flex;
+}
+.footer-col ul{
+    
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 60px;
+}
+.footer-col ul li a{
+    font-family: 'Bebas Neue', cursive;
+
+    font-size: 17px;
+    text-decoration: none;
+    color: white;
+    
+}
+.footer-col2{
+    display: flex;
+    
+}
+.footer-col2 ul{
+    
+    flex-direction: column;
+    margin-top: 130px;
+}
+
+.footer-col2 ul li a{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 17px;
+    text-decoration: none;
+    color: #505050;
+
+}
+#afuera{
+    color: white;
+}
+#afuera2{
+    color: white;
+}
+.footer-col2 ul li a:hover{
+    color: rgb(177, 177, 177);
+}
+.sub-footer{
+    display: flex;
+    position: relative;
+    top: 370px;
+    left: 250px;
+    color: white;
+    gap: 60px;
+}
+@media (min-width:1920px) {
+    .exitostxt{
+        position: relative;
+        left: -730px;
+    }
+    .btn-background{
+        position: relative;
+        top: -290px;
+        left:-815px;
+    }
+    #footer{
+        margin-top: 300px;
+    }
 }

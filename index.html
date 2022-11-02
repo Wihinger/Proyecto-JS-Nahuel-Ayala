@@ -15,6 +15,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <title>Document</title>
 </head>
 
@@ -29,40 +32,35 @@
         <div class="logo">
           <a href="https://www.nike.com/us/es/" target="_blank"><img src="./assets/nike-logo.png" alt="Nike Logo"></a>
         </div>
-        <ul>
-          <li class="list-item"><a href="https://www.instagram.com/nike/" target="_blank"
-              class="link-item">INSTAGRAM</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle link-item" href="#" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              SUCURSALES
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Nike Nuevocentro</a></li>
-              <li><a class="dropdown-item" href="#">Nike Montevideo</a></li>
-            </ul>
-        </ul>
         <!-- Button trigger modal -->
-        <a id="botonCarrito" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-cart fa-1x"></i></a>
+        <a id="botonCarrito" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+            class="fas fa-shopping-cart fa-1x"></i></a>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">CARRITO</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div id="modal-body">
-        
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button type="button" data-bs-dismiss="modal" class="btn btn-success" id="botonFinalizarCompra">Finalizar Compra</button>
-      </div>
-    </div>
-  </div>
-</div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">CARRITO</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body" id="modal-body">
+              
+              </div>
+              <div class="row ml-ato">
+                <p id="precioTotal"></p>
+              </div>
+              <div id="modal-body">
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" data-bs-dismiss="modal" class="btn btn-success"
+                  id="botonFinalizarCompra">Finalizar Compra</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
   </div>
@@ -129,8 +127,62 @@
         </div>
       </div>
     </section>
+    <section class="clothes">
+      <div class="titulo">
+        <h1>AMÁ LO QUE LLEVAS PUESTO</h1>
+      </div>
+      <div class="background">
+        <img src="./assets/backgroundnike.jpg" alt="Background Clothes">
+        <h2 class="exitostxt">40 AÑOS</h2>
+        <h2 class="exitostxt">DE ÉXITO</h2>
+        <p class="exitosp">Anunciamos el AF1 del 40 aniversario exclusivo para miembros.</p>
+        <p class="exitosp">Consigue tu par y lucelo con nosotros</p>
+        <div class="btn-background"><a href="https://www.instagram.com/nike/?hl=es" target="_blank">Visitanos</a></div>
+      </div>
+      <div class="titulo2">
+        <h1>Temporada de fiestas de nike 2022</h1>
+      </div>
+      <div class="background2">
+        <img src="./assets/backgroundnike2.jpg" alt="Background Clothes Fiestas">
+      </div>
+        <p class="exitosp2">Anunciamos el AF1 del 40 aniversario exclusivo para miembros.</p>
+        <p class="exitosp2">Consigue tu par y lucelo con nosotros</p>
+        <div class="btn-background2"><a href="https://www.instagram.com/nike/?hl=es" target="_blank">Visitanos</a></div>
+    </section>
   </main>
   <footer id="footer">
+    <div class="main-footer">
+      <div class="footer-col">
+        <ul>
+          <li><a href="#">TARJETAS DE REGALO</a> </li>
+          <li><a href="#">BUSCAR TIENDA</a> </li>
+          <li><a href="#">ELECTRONICOS</a> </li>
+          <li><a href="#">HACERSE MIEMBRO</a> </li>
+          <li><a href="#">NIKE JOURNAL</a> </li>
+          <li><a href="#">HACERSE MIEMBRO</a> </li>
+          <li><a href="#">REGÍSTRATE PARA RECIBIR CORREOS</a> </li>
+          <li><a href="#">ENVIANOS TU COMENTARIO</a> </li>
+        </ul>
+      </div>
+      <div class="footer-col2">
+        <ul>
+          <li><a href="#" id="afuera">OBTENER AYUDA</a> </li>
+          <li><a href="#">ESTADO DEL PEDIDO</a> </li>
+          <li><a href="#">ENVIO Y ENTREGA</a> </li>
+          <li><a href="#">DEVOLUCIONES</a> </li>
+          <li><a href="#">COMUNICATE CON NOSOTROS</a> </li>
+        </ul>
+      </div>
+      <div class="footer-col2">
+        <ul>
+          <li><a href="#" id="afuera2">ACERCA DE NIKE</a> </li>
+          <li><a href="#">NOTICIAS</a> </li>
+          <li><a href="#">EMPLEO</a> </li>
+          <li><a href="#">INVERSORES</a> </li>
+          <li><a href="#">PROPOSITO</a> </li>
+        </ul>
+      </div>
+    </div>
   </footer>
 
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -138,6 +190,7 @@
   <script src="https://kit.fontawesome.com/db4197159f.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="./codigo.js"></script>
+  <script src="class.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
     crossorigin="anonymous"></script>

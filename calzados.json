@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "marca": "Nike Jordan 1 Mid",
+        "precio": 5000,
+        "imagen": "air-jordan-1-shoes-HRhPMl.png"
+    },
+    {
+        "id": 1,
+        "marca": "Nike Waffle Debut",
+        "precio": 4500,
+        "imagen": "waffle-debut-shoes-JRWJk7.png"
+    },
+    {
+        "id": 1,
+        "marca": "Nike Cortez",
+        "precio": 3800,
+        "imagen": "nike-cortez.png"
+    },
+    {
+        "id": 1,
+        "marca": "Nike Air Vapormax",
+        "precio": 6000,
+        "imagen": "air-vapormax-2021-fk-NpTfFz.png"
+    },
+    {
+        "id": 1,
+        "marca": "nike-hurache.png",
+        "precio": 4000,
+        "imagen": "air-jordan-1-shoes-HRhPMl.png"
+    },
+    {
+        "id": 1,
+        "marca": "Nike Vapormax Plus",
+        "precio": 5000,
+        "imagen": "nike-vapormax-plus.png"
+    },
+    {
+        "id": 1,
+        "marca": "nike-jordan-delta.png",
+        "precio": 5500,
+        "imagen": "air-jordan-1-shoes-HRhPMl.png"
+    },
+    {
+        "id": 1,
+        "marca": "Nike Monarch IV",
+        "precio": 3500,
+        "imagen": "nike-monarch-iv.png"
+    }
+]

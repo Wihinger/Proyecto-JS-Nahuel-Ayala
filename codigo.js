@@ -1,21 +1,4 @@
-class calzado {
-    constructor(id, marca, precio, imagen){
-        this.id = id,
-        this.marca = marca,
-        this.precio = precio,
-        this.imagen = imagen
-    }
-}
-const calzado1 = new calzado(1, "Nike Jordan 1 Mid", 5000, "./assets/air-jordan-1-shoes-HRhPMl.png" )
-const calzado2 = new calzado(2, "Nike Waffle Debut", 4500, "./assets/waffle-debut-shoes-JRWJk7.png")
-const calzado3 = new calzado(3, "Nike Cortez", 3800, "./assets/nike-cortez.png")
-const calzado4 = new calzado(4, "Nike Air Vapormax", 6600, "./assets/air-vapormax-2021-fk-NpTfFz.png")
-const calzado5 = new calzado(5, "Nike Hurache", 5500, "./assets/nike-hurache.png")
-const calzado6 = new calzado(6, "Nike Vapormax Plus", 4000, "./assets/nike-vapormax-plus.png")
-const calzado7 = new calzado(7, "Nike Jordan Delta", 5500, "./assets/nike-jordan-delta.png")
-const calzado8 = new calzado(8, "Nike Monarch IV", 4000, "./assets/nike-monarch-iv.png")
 
-let productosEnCarrito = []
 let calzados = []
 if(localStorage.getItem("calzados")){
     calzados = JSON.parse(localStorage.getItem("calzados"))
@@ -55,11 +38,50 @@ function mostrarCatalogo(array){
         })
     })
 }
+let botonCarrito = document.getElementById("botonCarrito")
+let modalBody = document.getElementById("modal-body")
+let botonFinalizarCompra = document.getElementById("botonFinalizarCompra")
+let parrafoCompra = document.getElementById('precioTotal')
 
+function agregarAlCarrito(champion){
+    //CONDICIONAL QUE DECIDA, SI SE AGREGA O NO
+    // si en productosEnCarrito existe o no el libro que quiero pushear
+    let calzadoAgregado = productosEnCarrito.find((elem)=> (elem.id == champion.id))
+    console.log(calzadoAgregado)
+    //Si quisiera sumar cantidad
+    //si no encuentra nada me devuelve libroAgregado = undefined
+    if(calzadoAgregado == undefined){
+        productosEnCarrito.push(champion)
+        // console.log(productosEnCarrito)
+        localStorage.setItem("carrito", JSON.stringify(productosEnCarrito))
+        
+        //Alert con sweetAlert
+        Swal.fire({
+            title: "Ha agregado un producto",
+            icon: "success",
+            confirmButtonText : "Acepto",
+            timer: 3000,
+            text: `El calzado ${champion.marca} ha sido agregado`,
+            imageHeight: 400,
+            imageAlt: `${champion.marca}` 
+            
+        })
 
-function agregarAlCarrito(calzado){
-    productosEnCarrito.push(calzado)
-    console.log(productosEnCarrito)
+    }else{
+        //cuanto tiene de cantidad en el carrito y le suma
+
+        console.log(`El calzado ${champion.titulo} ya se encuentra en el carrito`)
+        Swal.fire({
+            title: "Producto ya agregado",
+            text: `El calzado ${champion.marca} ya se encuentra en el carrito`,
+            icon: "info",
+            timer:2500,
+            confirmButtonText:"Aceptar",
+            confirmButtonColor: 'red',
+            
+        })
+    }
+    
 }
 function ocultarCatalogo(){
     divProductos.innerHTML = ""
@@ -73,10 +95,7 @@ btnMostrarCatalogo.addEventListener("click", ()=>{
 
 
 
-let botonCarrito = document.getElementById("botonCarrito")
-let modalBody = document.getElementById("modal-body")
-let botonFinalizarCompra = document.getElementById("botonFinalizarCompra")
-let parrafoCompra = document.getElementById('precioTotal')
+
 
 botonCarrito.addEventListener("click", ()=>{
 cargarProductosCarrito(productosEnCarrito)
@@ -94,16 +113,61 @@ function cargarProductosCarrito(array){
                     <button class= "btn btn-danger" id="botonEliminar"><i class="fas fa-trash-alt"></i></button>
             </div>    
         </div>`
+})
+document.getElementById(`botonEliminar ${productoCarrito.id}`)
+array.forEach((productoCarrito, indice)=>{
+    document.getElementById(`botonEliminar${productoCarrito.id}`).addEventListener("click",()=>{
+        console.log(`El producto eliminado es ${productoCarrito.marca}`)
+        //Eliminarlo del array
+        //método splice (desde que posición, cuantos elementos a borrar)
+        array.splice(indice, 1)
+        console.log(array)
+        //eliminarlo del storage
+        localStorage.setItem("carrito", JSON.stringify(array))
+        //eliminarlo del DOM
+        let cardProducto = document.getElementById(`productoCarrito${productoCarrito.id}`)
+        console.log(cardProducto)
+        cardProducto.remove()
+        //Recalcula total
+        
+        // cargarProductosCarrito(array)
+
     })
-    //calcular el total
-    compraTotal(array)
+    
+})
 }
- 
-function compraTotal(array){
-    let acumulador = 0
-    acumulador = array.reduce((acumulador, productoCarrito)=>{
-        return acumulador + productoCarrito.precio
-    },0)
-    // console.log(`EL total hasta ahora es: ${acumulador}`)
-    acumulador == 0 ? parrafoCompra.innerHTML = `<strong>No hay productos en el carrito</strong>` : parrafoCompra.innerHTML = `El total de su carrito es ${acumulador}` 
+
+function finalizarCompra(){
+    //PReguntar si ta seguro
+    Swal.fire({
+        title: 'Está seguro de realizar la compra',
+        icon: 'info',
+        showCancelButton: true,
+        confirmButtonText: 'Sí, seguro',
+        cancelButtonText: 'No, no quiero',
+        confirmButtonColor: 'green',
+        cancelButtonColor: 'red',
+    }).then((result)=>{
+        if(result.isConfirmed){
+            Swal.fire({
+            title: 'Compra realizada',
+            icon: 'success',
+            confirmButtonColor: 'green',
+            text: `Muchas gracias por su compra ha adquirido nuestros productos. `,
+            })
+            productosEnCarrito =[]
+            localStorage.removeItem("carrito")
+            
+        }else{
+            Swal.fire({
+                title: 'Compra no realizada',
+                icon: 'info',
+                text: `La compra no ha sido realizada! Atención sus productos siguen en el carrito :D`,
+                confirmButtonColor: 'green',
+                timer:3500
+            })
+        }
+    })
 }
+botonFinalizarCompra.addEventListener("click", ()=>{finalizarCompra()})
+
